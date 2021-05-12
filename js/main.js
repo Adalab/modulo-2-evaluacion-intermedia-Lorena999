@@ -11,24 +11,25 @@ const Randomnumber = getRandomNumber(100);
     console.log(Randomnumber);
 
     function compareUserNumber () {
-        const userNumberValue = userNumber.value;
+        const userNumberValue = parseInt(userNumber.value);
+        
         if (Randomnumber < userNumberValue) {
-            resultUserNumber.value = 'Demasiado alto';
+            userNumberValue = 'Demasiado alto';
         } else if (Randomnumber < userNumberValue) {
-            resultUserNumber.value = 'Demasiado bajo';
+            userNumberValue = 'Demasiado bajo';
         }
         else if (Randomnumber === userNumberValue) {
-            resultUserNumber.value = 'Has ganado campeona';
+            userNumberValue = 'Has ganado campeona';
         }
     
   }
 
   function addAttemps() {
-const addUserForm = addUser
+//const addUserForm = addUser
   }
 
 function handleClicButton () {
     compareUserNumber();
-    addAttemps();
+    //addAttemps();
   }
   buttonProof.addEventListener('click', handleClicButton);
