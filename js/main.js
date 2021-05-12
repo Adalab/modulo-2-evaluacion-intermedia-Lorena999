@@ -1,6 +1,6 @@
 const buttonProof = document.querySelector('.js-button-proof');
-const userNumber = document.querySelector('js-user-number');
-const resultUserNumber = document.querySelector('js-result-user-number');
+const userNumber = document.querySelector('.js-user-number');
+const resultUserNumber = document.querySelector('.js-result-user-number');
 const addUser = document.querySelector('.js-addUser');
 
 function getRandomNumber(max) {
@@ -14,12 +14,12 @@ const Randomnumber = getRandomNumber(100);
         const userNumberValue = parseInt(userNumber.value);
         
         if (Randomnumber < userNumberValue) {
-            userNumberValue = 'Demasiado alto';
-        } else if (Randomnumber < userNumberValue) {
-            userNumberValue = 'Demasiado bajo';
+            resultUserNumber.value = 'Demasiado alto';
+        } else if (Randomnumber > userNumberValue) {
+            resultUserNumber.value = 'Demasiado bajo';
         }
         else if (Randomnumber === userNumberValue) {
-            userNumberValue = 'Has ganado campeona';
+            resultUserNumber.value = 'Has ganado campeona';
         }
     
   }
